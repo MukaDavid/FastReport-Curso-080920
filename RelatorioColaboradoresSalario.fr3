@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<TfrxReport Version="6.7.4" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="167935" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" PrintOptions.PrintOnSheet="0" ReportOptions.CreateDate="44082,8987737847" ReportOptions.Description.Text="" ReportOptions.LastChange="44082,9487391551" ScriptLanguage="PascalScript" ScriptText.Text="&#13;&#10;begin&#13;&#10;&#13;&#10;end." StoreInDFM="False">
+<TfrxReport Version="6.7.4" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="167935" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" PrintOptions.PrintOnSheet="0" ReportOptions.CreateDate="44082,8987737847" ReportOptions.Description.Text="" ReportOptions.LastChange="44084,8636643171" ScriptLanguage="PascalScript" ScriptText.Text="&#13;&#10;begin&#13;&#10;&#13;&#10;end." StoreInDFM="False">
   <Datasets>
     <item DataSet="frxDBEmployee" DataSetName="frxDBEmployee"/>
   </Datasets>
@@ -13,6 +13,7 @@
       <TfrxMemoView Name="Memo7" AllowVectorExport="True" Left="128,25" Top="27,35235" Width="428,23825" Height="40,20671" Font.Charset="1" Font.Color="0" Font.Height="-32" Font.Name="Arial" Font.Style="1" Frame.Typ="0" HAlign="haCenter" ParentFont="False" Text="Relatório de Colaboradores"/>
       <TfrxMemoView Name="Date" IndexTag="1" AllowVectorExport="True" Left="366,25" Top="4,85235" Width="344,37013" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="0" HAlign="haRight" ParentFont="False" Text="[Cidade] [FormatDateTime('dd',&#60;Date&#62;)] de [FormatDateTime('mmmm',&#60;Date&#62;)] de [FormatDateTime('yyyy',&#60;Date&#62;)]">
         <Formats>
+          <item/>
           <item/>
           <item/>
           <item/>

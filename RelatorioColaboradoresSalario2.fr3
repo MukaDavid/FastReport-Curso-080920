@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<inherited ParentReport="RelatorioBase.fr3" ReportOptions.CreateDate="44082,8987737847" ReportOptions.LastChange="44084,8986184491" StoreInDFM="False">
+  <Datasets>
+    <item DataSet="frxDBEmployee" DataSetName="frxDBEmployee"/>
+  </Datasets>
+  <Variables>
+    <item InheritedName=" Geral"/>
+    <item InheritedName="Cidade"/>
+  </Variables>
+  <inherited Name="Data"/>
+  <inherited Name="Page1" PaperSize="9">
+    <inherited Name="RptTitle">
+      <inherited Name="memTitulo"/>
+      <inherited Name="imgLogo"/>
+      <inherited Name="memData">
+        <Formats>
+          <item/>
+          <item/>
+          <item/>
+          <item/>
+        </Formats>
+      </inherited>
+    </inherited>
+    <inherited Name="MasterDataBand" Top="268,34663" DataSet="frxDBEmployee" DataSetName="frxDBEmployee">
+      <TfrxMemoView Name="Memo8" AllowVectorExport="True" Left="3" Top="-0,34663" Width="716,98825" Height="22,67718" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="0" Fill.BackColor="15000804" HAlign="haCenter" Highlight.ApplyFont="False" Highlight.Font.Charset="1" Highlight.Font.Color="255" Highlight.Font.Height="-13" Highlight.Font.Name="Arial" Highlight.Font.Style="0" Highlight.Condition="&#60;Line&#62; mod 2 = 1" Highlight.FillType="ftBrush" Highlight.Fill.BackColor="16777215" Highlight.Frame.Typ="0" ParentFont="False" Text=""/>
+      <TfrxMemoView Name="frxDBEmployeeEMP_NO" IndexTag="1" AllowVectorExport="True" Left="21,5" Top="1,95068" Width="75,5906" Height="18,89765" DataField="EMP_NO" DataSet="frxDBEmployee" DataSetName="frxDBEmployee" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="0" HAlign="haRight" ParentFont="False" Text="[frxDBEmployee.&#34;EMP_NO&#34;]"/>
+      <TfrxMemoView Name="frxDBEmployeeLAST_NAME" IndexTag="1" AllowVectorExport="True" Left="120,25" Top="1,95068" Width="281,24026" Height="18,89765" DataSet="frxDBEmployee" DataSetName="frxDBEmployee" Frame.Typ="0" Text="[frxDBEmployee.&#34;FIRST_NAME&#34;] [frxDBEmployee.&#34;LAST_NAME&#34;]"/>
+      <TfrxMemoView Name="frxDBEmployeeHIRE_DATE" IndexTag="1" AllowVectorExport="True" Left="420,25" Top="1,95068" Width="85,87616" Height="18,89765" DataField="HIRE_DATE" DataSet="frxDBEmployee" DataSetName="frxDBEmployee" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="0" HAlign="haCenter" ParentFont="False" Text="[frxDBEmployee.&#34;HIRE_DATE&#34;]"/>
+      <TfrxMemoView Name="frxDBEmployeeSALARY" IndexTag="1" AllowVectorExport="True" Left="521,5" Top="1,95068" Width="151,1812" Height="18,89765" DataSet="frxDBEmployee" DataSetName="frxDBEmployee" DisplayFormat.FormatStr="%2.2m" DisplayFormat.Kind="fkNumeric" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="0" HAlign="haRight" Highlight.Font.Charset="1" Highlight.Font.Color="255" Highlight.Font.Height="-13" Highlight.Font.Name="Arial" Highlight.Font.Style="1" Highlight.Condition="&#60;frxDBEmployee.&#34;SALARY&#34;&#62; &#62;= 100000" Highlight.FillType="ftBrush" Highlight.Fill.ForeColor="255" Highlight.Frame.Typ="0" ParentFont="False" Text="[frxDBEmployee.&#34;SALARY&#34;]"/>
+    </inherited>
+    <inherited Name="PgFooter" Top="396,85065">
+      <inherited Name="memPage"/>
+    </inherited>
+    <inherited Name="pgHeader">
+      <inherited Name="memTotalPage"/>
+      <inherited Name="MemBoasFestas"/>
+    </inherited>
+    <TfrxHeader Name="Header1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Frame.Typ="0" Height="22,67718" Left="0" Top="222,99227" Width="718,1107" ReprintOnNewPage="True">
+      <TfrxMemoView Name="Memo5" AllowVectorExport="True" Left="19,5" Top="4,00773" Width="75,73825" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" Frame.Typ="0" HAlign="haRight" ParentFont="False" Text="Código"/>
+      <TfrxMemoView Name="Memo7" AllowVectorExport="True" Left="408,943955" Top="4,00773" Width="94,48825" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" Frame.Typ="0" HAlign="haCenter" ParentFont="False" Text="Nascimento"/>
+      <TfrxMemoView Name="Memo9" AllowVectorExport="True" Left="571,19295" Top="4,00773" Width="94,48825" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" Frame.Typ="0" HAlign="haRight" ParentFont="False" Text="Salário"/>
+      <TfrxMemoView Name="Memo6" AllowVectorExport="True" Left="122,25" Top="2,00773" Width="108,23825" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" Frame.Typ="0" ParentFont="False" Text="Nome"/>
+      <TfrxLineView Name="Line1" AllowVectorExport="True" Left="1" Top="21,06277" Width="715" Height="0" Color="0" Frame.Typ="4"/>
+    </TfrxHeader>
+    <TfrxFooter Name="Footer1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Frame.Typ="0" Height="22,67718" Left="0" Top="313,70099" Width="718,1107">
+      <TfrxMemoView Name="Memo10" AllowVectorExport="True" Left="454" Top="1,29901" Width="220,48825" Height="18,89765" AutoWidth="True" DisplayFormat.FormatStr="%2.2m" DisplayFormat.Kind="fkNumeric" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" Frame.Typ="0" HAlign="haRight" ParentFont="False" Text="Total geral: [SUM(&#60;frxDBEmployee.&#34;SALARY&#34;&#62;,MasterDataBand)]"/>
+    </TfrxFooter>
+  </inherited>
+</inherited>
