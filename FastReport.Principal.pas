@@ -20,10 +20,18 @@ type
     DataSource2: TDataSource;
     btnRelatorioDepartamento: TButton;
     CheckBox1: TCheckBox;
+    DBGrid3: TDBGrid;
+    DataSource3: TDataSource;
+    OpenDialog1: TOpenDialog;
+    btnAbrirRelatório: TButton;
+    btnBiolife: TButton;
+    chxMostraChild: TCheckBox;
     procedure btnListagemColaboradoresClick(Sender: TObject);
     procedure btnRelatorioColaboradoresSalarioClick(Sender: TObject);
     procedure btnRelatorioVendasClick(Sender: TObject);
     procedure btnRelatorioDepartamentoClick(Sender: TObject);
+    procedure btnAbrirRelatórioClick(Sender: TObject);
+    procedure btnBiolifeClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -36,6 +44,19 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TfrmPrincipal.btnAbrirRelatórioClick(Sender: TObject);
+begin
+  if OpenDialog1.Execute then
+  begin
+    dmdRelatorios.PreviewRelatorioArquivo(OpenDialog1.FileName);
+  end;
+end;
+
+procedure TfrmPrincipal.btnBiolifeClick(Sender: TObject);
+begin
+  dmdRelatorios.PreviewRelatorioBiolife(chxMostraChild.Checked);
+end;
 
 procedure TfrmPrincipal.btnListagemColaboradoresClick(Sender: TObject);
 begin

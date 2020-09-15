@@ -5,7 +5,7 @@ interface
 uses
   System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async,
   FireDAC.Phys, FireDAC.Phys.FB, FireDAC.Phys.FBDef, FireDAC.VCLUI.Wait, Data.DB, FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet, frxClass,
-  frxDBSet, frxExportBaseDialog, frxExportPDF, frxExportRTF, Winapi.Windows;
+  frxDBSet, frxExportBaseDialog, frxExportPDF, frxExportRTF, Winapi.Windows, Datasnap.DBClient;
 
 type
   TdmdRelatorios = class(TDataModule)
@@ -22,6 +22,8 @@ type
     dscDepartament: TDataSource;
     frxDBDepartament: TfrxDBDataset;
     frxDBEmployeeDept: TfrxDBDataset;
+    cdsBiolife: TClientDataSet;
+    frxDBBiolife: TfrxDBDataset;
   private
     const CIDADE = 'Florianópolis';
     { Private declarations }
@@ -32,6 +34,9 @@ type
     procedure PreviewRelatorioVendas;
     procedure PreviewRelatorio(pNomeRelatotio: String; pCidade: string = '');
     procedure PreviewRelatorioDepartamento(bAnalitico: Boolean);
+    procedure PreviewRelatorioArquivo(pNomeArquivo: String; pCidade: string = '');
+    procedure PreviewRelatorioBiolife(pMostraChild: boolean);
+
 
     { Public declarations }
   end;
@@ -79,6 +84,30 @@ begin
   frxReport1.ShowReport;
 end;
 
+procedure TdmdRelatorios.PreviewRelatorioArquivo(pNomeArquivo, pCidade: string);
+begin
+  frxReport1.LoadFromFile(pNomeArquivo);
+  frxReport1.Report.Variables['Cidade'] := QuotedStr(pCidade);
+  frxReport1.ShowReport;
+end;
+
+procedure TdmdRelatorios.PreviewRelatorioBiolife(pMostraChild: boolean);
+begin
+  frxReport1.LoadFromFile('..\..\RelBiolife.fr3');
+
+  TfrxDetailData(frxReport1.FindObject('DetailData')).OnBeforePrint := '';
+
+  //frxReport1.ScriptText :=
+
+
+  frxReport1.Report.Variables['Cidade'] := QuotedStr(CIDADE);
+  if pMostraChild then
+    frxReport1.Report.Variables['MostraChild'] := QuotedStr('S')
+  else
+    frxReport1.Report.Variables['MostraChild'] := QuotedStr('N');
+  frxReport1.ShowReport;
+end;
+
 procedure TdmdRelatorios.PreviewRelatorioColaboradoresSalario(pCidade: string);
 begin
   frxReport1.LoadFromFile('..\..\RelatorioColaboradoresSalario2.fr3');
@@ -90,11 +119,11 @@ procedure TdmdRelatorios.PreviewRelatorioDepartamento(bAnalitico: Boolean);
 begin
   frxReport1.LoadFromFile('..\..\RelatorioDepartamento.fr3');
 
-
-  {TfrxDetailData(frxReport1.FindObject('DetailData')).Visible := bAnalitico;
+  TfrxDetailData(frxReport1.FindObject('DetailData')).Visible := bAnalitico;
   TfrxHeader(frxReport1.FindObject('Header')).Visible := bAnalitico;
   TfrxFooter(frxReport1.FindObject('Footer')).Visible := bAnalitico;
-  TfrxMemoView(frxReport1.FindObject('memSalarioTotal')).Visible := not bAnalitico;}
+  TfrxMemoView(frxReport1.FindObject('memSalarioTotal')).Visible := not bAnalitico;
+
 
   if not bAnalitico then
     frxReport1.Report.Variables['Sintetico'] := QuotedStr('S')

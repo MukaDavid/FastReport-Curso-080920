@@ -1,8 +1,8 @@
-object frmPrincipal: TfrmPrincipal
+﻿object frmPrincipal: TfrmPrincipal
   Left = 0
   Top = 0
   Caption = 'frmPrincipal'
-  ClientHeight = 387
+  ClientHeight = 675
   ClientWidth = 808
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -99,12 +99,51 @@ object frmPrincipal: TfrmPrincipal
     OnClick = btnRelatorioDepartamentoClick
   end
   object CheckBox1: TCheckBox
-    Left = 144
-    Top = 272
+    Left = 279
+    Top = 236
     Width = 97
     Height = 17
-    Caption = 'CheckBox1'
+    Caption = 'Sint'#233'tico'
     TabOrder = 8
+  end
+  object DBGrid3: TDBGrid
+    Left = 32
+    Top = 352
+    Width = 752
+    Height = 177
+    DataSource = DataSource3
+    TabOrder = 9
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object btnAbrirRelatório: TButton
+    Left = 48
+    Top = 552
+    Width = 161
+    Height = 25
+    Caption = 'Abrir Relat'#243'rio'
+    TabOrder = 10
+    OnClick = btnAbrirRelatórioClick
+  end
+  object btnBiolife: TButton
+    Left = 24
+    Top = 280
+    Width = 249
+    Height = 25
+    Caption = 'Biolife'
+    TabOrder = 11
+    OnClick = btnBiolifeClick
+  end
+  object chxMostraChild: TCheckBox
+    Left = 279
+    Top = 284
+    Width = 97
+    Height = 17
+    Caption = 'Mostra Child'
+    TabOrder = 12
   end
   object DataSource1: TDataSource
     DataSet = dmdRelatorios.qryDepartament
@@ -115,5 +154,16 @@ object frmPrincipal: TfrmPrincipal
     DataSet = dmdRelatorios.qryEmployeeDept
     Left = 680
     Top = 232
+  end
+  object DataSource3: TDataSource
+    DataSet = dmdRelatorios.cdsBiolife
+    Left = 432
+    Top = 432
+  end
+  object OpenDialog1: TOpenDialog
+    DefaultExt = '.fr3'
+    Filter = 'FastReport|*.fr3'
+    Left = 352
+    Top = 544
   end
 end
