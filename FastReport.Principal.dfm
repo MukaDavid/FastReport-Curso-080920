@@ -78,7 +78,7 @@
   end
   object DBGrid2: TDBGrid
     Left = 456
-    Top = 208
+    Top = 200
     Width = 320
     Height = 120
     DataSource = DataSource2
@@ -146,17 +146,17 @@
     TabOrder = 12
   end
   object DataSource1: TDataSource
-    DataSet = dmdRelatorios.qryDepartament
+    DataSet = dmdRelatorios.qryCountry
     Left = 680
     Top = 88
   end
   object DataSource2: TDataSource
-    DataSet = dmdRelatorios.qryEmployeeDept
+    DataSet = dmdRelatorios.qryEmployeeCountry
     Left = 680
     Top = 232
   end
   object DataSource3: TDataSource
-    DataSet = dmdRelatorios.cdsBiolife
+    DataSet = dmdRelatorios.qrySalesCountry
     Left = 432
     Top = 432
   end

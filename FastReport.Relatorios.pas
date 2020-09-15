@@ -24,6 +24,13 @@ type
     frxDBEmployeeDept: TfrxDBDataset;
     cdsBiolife: TClientDataSet;
     frxDBBiolife: TfrxDBDataset;
+    qryCountry: TFDQuery;
+    qryEmployeeCountry: TFDQuery;
+    qrySalesCountry: TFDQuery;
+    dscCountry: TDataSource;
+    frxDBCountry: TfrxDBDataset;
+    frxDBEmployeeCountry: TfrxDBDataset;
+    frxDBSalesCountry: TfrxDBDataset;
   private
     const CIDADE = 'Florianópolis';
     { Private declarations }

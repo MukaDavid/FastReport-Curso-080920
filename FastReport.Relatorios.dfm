@@ -1,7 +1,7 @@
 object dmdRelatorios: TdmdRelatorios
   OldCreateOrder = False
   Height = 358
-  Width = 730
+  Width = 921
   object FDConnection1: TFDConnection
     Params.Strings = (
       
@@ -35,8 +35,8 @@ object dmdRelatorios: TdmdRelatorios
     PreviewOptions.Zoom = 1.000000000000000000
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
-    ReportOptions.CreateDate = 44089.809446203700000000
-    ReportOptions.LastChange = 44089.847812002310000000
+    ReportOptions.CreateDate = 44084.918294004600000000
+    ReportOptions.LastChange = 44084.957575428200000000
     ScriptLanguage = 'PascalScript'
     StoreInDFM = False
     Left = 40
@@ -157,7 +157,7 @@ object dmdRelatorios: TdmdRelatorios
         DataType = ftFixedChar
         ParamType = ptInput
         Size = 3
-        Value = '000'
+        Value = '200'
       end>
   end
   object dscDepartament: TDataSource
@@ -34699,5 +34699,89 @@ object dmdRelatorios: TdmdRelatorios
     BCDToCurrency = False
     Left = 528
     Top = 136
+  end
+  object qryCountry: TFDQuery
+    Active = True
+    Connection = FDConnection1
+    SQL.Strings = (
+      'select *'
+      'from country')
+    Left = 704
+    Top = 24
+  end
+  object qryEmployeeCountry: TFDQuery
+    Active = True
+    MasterSource = dscCountry
+    MasterFields = 'COUNTRY'
+    Connection = FDConnection1
+    FetchOptions.AssignedValues = [evCache]
+    FetchOptions.Cache = [fiBlobs, fiMeta]
+    SQL.Strings = (
+      'select *'
+      'from employee'
+      'where job_country = :country')
+    Left = 656
+    Top = 128
+    ParamData = <
+      item
+        Name = 'COUNTRY'
+        DataType = ftString
+        ParamType = ptInput
+        Size = 15
+        Value = 'USA'
+      end>
+  end
+  object qrySalesCountry: TFDQuery
+    Active = True
+    MasterSource = dscCountry
+    MasterFields = 'COUNTRY'
+    Connection = FDConnection1
+    FetchOptions.AssignedValues = [evCache]
+    FetchOptions.Cache = [fiBlobs, fiMeta]
+    SQL.Strings = (
+      'Select *'
+      'from sales s'
+      'inner join customer c on'
+      '  c.cust_no = s.cust_no'
+      'where country = :country')
+    Left = 760
+    Top = 128
+    ParamData = <
+      item
+        Name = 'COUNTRY'
+        DataType = ftString
+        ParamType = ptInput
+        Size = 15
+        Value = 'USA'
+      end>
+  end
+  object dscCountry: TDataSource
+    DataSet = qryCountry
+    Left = 704
+    Top = 80
+  end
+  object frxDBCountry: TfrxDBDataset
+    UserName = 'frxDBCountry'
+    CloseDataSource = False
+    DataSet = qryCountry
+    BCDToCurrency = False
+    Left = 704
+    Top = 200
+  end
+  object frxDBEmployeeCountry: TfrxDBDataset
+    UserName = 'frxDBEmployeeCountry'
+    CloseDataSource = False
+    DataSet = qryEmployeeCountry
+    BCDToCurrency = False
+    Left = 640
+    Top = 240
+  end
+  object frxDBSalesCountry: TfrxDBDataset
+    UserName = 'frxDBSalesCountry'
+    CloseDataSource = False
+    DataSet = qrySalesCountry
+    BCDToCurrency = False
+    Left = 768
+    Top = 240
   end
 end
