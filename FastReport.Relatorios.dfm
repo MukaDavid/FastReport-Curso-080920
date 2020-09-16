@@ -35,8 +35,8 @@ object dmdRelatorios: TdmdRelatorios
     PreviewOptions.Zoom = 1.000000000000000000
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
-    ReportOptions.CreateDate = 44084.918294004600000000
-    ReportOptions.LastChange = 44084.957575428200000000
+    ReportOptions.CreateDate = 44089.809446203700000000
+    ReportOptions.LastChange = 44089.938657106500000000
     ScriptLanguage = 'PascalScript'
     StoreInDFM = False
     Left = 40
@@ -34728,13 +34728,14 @@ object dmdRelatorios: TdmdRelatorios
         DataType = ftString
         ParamType = ptInput
         Size = 15
-        Value = 'USA'
+        Value = 'Fiji'
       end>
   end
   object qrySalesCountry: TFDQuery
     Active = True
     MasterSource = dscCountry
     MasterFields = 'COUNTRY'
+    DetailFields = 'COUNTRY'
     Connection = FDConnection1
     FetchOptions.AssignedValues = [evCache]
     FetchOptions.Cache = [fiBlobs, fiMeta]
@@ -34752,7 +34753,7 @@ object dmdRelatorios: TdmdRelatorios
         DataType = ftString
         ParamType = ptInput
         Size = 15
-        Value = 'USA'
+        Value = 'Fiji'
       end>
   end
   object dscCountry: TDataSource
@@ -34782,6 +34783,10 @@ object dmdRelatorios: TdmdRelatorios
     DataSet = qrySalesCountry
     BCDToCurrency = False
     Left = 768
+    Top = 240
+  end
+  object frxDialogControls1: TfrxDialogControls
+    Left = 344
     Top = 240
   end
 end

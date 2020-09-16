@@ -5,7 +5,8 @@ interface
 uses
   System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async,
   FireDAC.Phys, FireDAC.Phys.FB, FireDAC.Phys.FBDef, FireDAC.VCLUI.Wait, Data.DB, FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet, frxClass,
-  frxDBSet, frxExportBaseDialog, frxExportPDF, frxExportRTF, Winapi.Windows, Datasnap.DBClient;
+  frxDBSet, frxExportBaseDialog, frxExportPDF, frxExportRTF, Winapi.Windows, Datasnap.DBClient,
+  frxDBXComponents, midaslib, Data.DBXFirebird, Data.SqlExpr, frxDCtrl;
 
 type
   TdmdRelatorios = class(TDataModule)
@@ -31,6 +32,7 @@ type
     frxDBCountry: TfrxDBDataset;
     frxDBEmployeeCountry: TfrxDBDataset;
     frxDBSalesCountry: TfrxDBDataset;
+    frxDialogControls1: TfrxDialogControls;
   private
     const CIDADE = 'Florianópolis';
     { Private declarations }
