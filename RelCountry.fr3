@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<inherited ParentReport="RelatorioBase.fr3" ReportOptions.CreateDate="44089,8891386111" ReportOptions.LastChange="44089,9190285764" ScriptText.Text="begin&#13;&#10;&#13;&#10;end.&#13;&#10;{&#13;&#10;**********Script from parent report**********&#13;&#10;&#13;&#10;begin&#13;&#10;&#13;&#10;end.&#13;&#10;}" StoreInDFM="False">
+<inherited ParentReport="RelatorioBase.fr3" ReportOptions.CreateDate="44089,8891386111" ReportOptions.LastChange="44091,8586718403" ScriptText.Text="begin&#13;&#10;&#13;&#10;end.&#13;&#10;{&#13;&#10;**********Script from parent report**********&#13;&#10;&#13;&#10;begin&#13;&#10;&#13;&#10;end.&#13;&#10;}" StoreInDFM="False">
   <Datasets>
     <item DataSet="frxDBCountry" DataSetName="frxDBCountry"/>
     <item DataSet="frxDBEmployeeCountry" DataSetName="frxDBEmployeeCountry"/>
@@ -24,9 +24,9 @@
       <inherited Name="imgLogo" Top="9,54329"/>
     </inherited>
     <inherited Name="MasterDataBand" Height="63,92894591" Top="226,7718" DataSet="frxDBCountry" DataSetName="frxDBCountry" Filter="(&#60;frxDBEmployeeCountry.&#34;EMP_NO&#34;&#62; &#62; 0) or (&#60;frxDBSalesCountry.&#34;CUST_NO&#34;&#62; &#62; 0) ">
-      <TfrxShapeView Name="Shape1" AllowVectorExport="True" Left="2" Top="0,00773" Width="711" Height="25" Fill.BackColor="16774348" Frame.Typ="0"/>
-      <TfrxMemoView Name="frxDBCountryCOUNTRY" IndexTag="1" AllowVectorExport="True" Left="93" Top="2,90538" Width="120,94496" Height="18,89765" DataField="COUNTRY" DataSet="frxDBCountry" DataSetName="frxDBCountry" Frame.Typ="0" Text="[frxDBCountry.&#34;COUNTRY&#34;]"/>
-      <TfrxMemoView Name="Memo1" AllowVectorExport="True" Left="10" Top="3,00773" Width="76,94496" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" Frame.Typ="0" ParentFont="False" Text="COUNTRY:"/>
+      <TfrxShapeView Name="Shape1" AllowVectorExport="True" Left="2" Top="0,00773" Width="711" Height="25" Fill.BackColor="8388608" Frame.Typ="0"/>
+      <TfrxMemoView Name="frxDBCountryCOUNTRY" IndexTag="1" AllowVectorExport="True" Left="93" Top="2,90538" Width="120,94496" Height="18,89765" DataField="COUNTRY" DataSet="frxDBCountry" DataSetName="frxDBCountry" Font.Charset="1" Font.Color="16777215" Font.Height="-13" Font.Name="Arial" Font.Style="1" Frame.Typ="0" ParentFont="False" Text="[frxDBCountry.&#34;COUNTRY&#34;]"/>
+      <TfrxMemoView Name="Memo1" AllowVectorExport="True" Left="10" Top="3,00773" Width="76,94496" Height="18,89765" Font.Charset="1" Font.Color="16777215" Font.Height="-13" Font.Name="Arial" Font.Style="1" Frame.Typ="0" ParentFont="False" Text="COUNTRY:"/>
       <TfrxSubreport Name="Subreport1" AllowVectorExport="True" Left="6" Top="31,00773" Width="340,48825" Height="18,89765" Page="Page2"/>
       <TfrxSubreport Name="Subreport2" AllowVectorExport="True" Left="372" Top="31,00773" Width="328,48825" Height="18,89765" Page="Page3"/>
     </inherited>

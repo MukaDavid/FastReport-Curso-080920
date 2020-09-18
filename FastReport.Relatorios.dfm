@@ -26,7 +26,7 @@ object dmdRelatorios: TdmdRelatorios
     Top = 24
   end
   object frxReport1: TfrxReport
-    Version = '6.7.4'
+    Version = '6.7.11'
     ParentReport = 'RelatorioBase.fr3'
     DotMatrixReport = False
     EngineOptions.DoublePass = True
@@ -35,8 +35,8 @@ object dmdRelatorios: TdmdRelatorios
     PreviewOptions.Zoom = 1.000000000000000000
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
-    ReportOptions.CreateDate = 44089.809446203700000000
-    ReportOptions.LastChange = 44089.938657106500000000
+    ReportOptions.CreateDate = 44091.948309606500000000
+    ReportOptions.LastChange = 44091.971078553240000000
     ScriptLanguage = 'PascalScript'
     StoreInDFM = False
     Left = 40
@@ -157,7 +157,7 @@ object dmdRelatorios: TdmdRelatorios
         DataType = ftFixedChar
         ParamType = ptInput
         Size = 3
-        Value = '200'
+        Value = '000'
       end>
   end
   object dscDepartament: TDataSource
@@ -34698,7 +34698,7 @@ object dmdRelatorios: TdmdRelatorios
     DataSet = cdsBiolife
     BCDToCurrency = False
     Left = 528
-    Top = 136
+    Top = 128
   end
   object qryCountry: TFDQuery
     Active = True
@@ -34708,6 +34708,19 @@ object dmdRelatorios: TdmdRelatorios
       'from country')
     Left = 704
     Top = 24
+    object qryCountryCOUNTRY: TStringField
+      FieldName = 'COUNTRY'
+      Origin = 'COUNTRY'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+      Size = 15
+    end
+    object qryCountryCURRENCY: TStringField
+      FieldName = 'CURRENCY'
+      Origin = 'CURRENCY'
+      Required = True
+      Size = 10
+    end
   end
   object qryEmployeeCountry: TFDQuery
     Active = True
@@ -34728,7 +34741,7 @@ object dmdRelatorios: TdmdRelatorios
         DataType = ftString
         ParamType = ptInput
         Size = 15
-        Value = 'Fiji'
+        Value = 'USA'
       end>
   end
   object qrySalesCountry: TFDQuery
@@ -34753,7 +34766,7 @@ object dmdRelatorios: TdmdRelatorios
         DataType = ftString
         ParamType = ptInput
         Size = 15
-        Value = 'Fiji'
+        Value = 'USA'
       end>
   end
   object dscCountry: TDataSource
@@ -34786,7 +34799,69 @@ object dmdRelatorios: TdmdRelatorios
     Top = 240
   end
   object frxDialogControls1: TfrxDialogControls
-    Left = 344
-    Top = 240
+    Left = 304
+    Top = 224
+  end
+  object frxDBXComponents1: TfrxDBXComponents
+    Left = 440
+    Top = 224
+  end
+  object frxDesigner1: TfrxDesigner
+    DefaultScriptLanguage = 'PascalScript'
+    DefaultFont.Charset = DEFAULT_CHARSET
+    DefaultFont.Color = clWindowText
+    DefaultFont.Height = -13
+    DefaultFont.Name = 'Arial'
+    DefaultFont.Style = []
+    DefaultLeftMargin = 10.000000000000000000
+    DefaultRightMargin = 10.000000000000000000
+    DefaultTopMargin = 10.000000000000000000
+    DefaultBottomMargin = 10.000000000000000000
+    DefaultPaperSize = 9
+    DefaultOrientation = poPortrait
+    GradientEnd = 11982554
+    GradientStart = clWindow
+    TemplatesExt = 'fr3'
+    Restrictions = []
+    RTLLanguage = False
+    MemoParentFont = False
+    Left = 168
+    Top = 224
+  end
+  object FDMemPessoa: TFDMemTable
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.AutoCommitUpdates = True
+    Left = 832
+    Top = 24
+    object FDMemPessoaCodigo: TIntegerField
+      FieldName = 'Codigo'
+    end
+    object FDMemPessoaNome: TStringField
+      FieldName = 'Nome'
+    end
+    object FDMemPessoaEndereco: TStringField
+      FieldName = 'Endereco'
+      Size = 100
+    end
+  end
+  object fxrDBMemPessoa: TfrxDBDataset
+    UserName = 'fxrDBMemPessoa'
+    CloseDataSource = False
+    DataSet = FDMemPessoa
+    BCDToCurrency = False
+    Left = 832
+    Top = 80
+  end
+  object frxDBGenerico: TfrxDBDataset
+    UserName = 'frxDBGenerico'
+    CloseDataSource = False
+    BCDToCurrency = False
+    Left = 528
+    Top = 200
   end
 end

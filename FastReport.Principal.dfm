@@ -145,6 +145,24 @@
     Caption = 'Mostra Child'
     TabOrder = 12
   end
+  object btnDesignRelatorio: TButton
+    Left = 248
+    Top = 552
+    Width = 177
+    Height = 25
+    Caption = 'Abrir Design Relat'#243'rio'
+    TabOrder = 13
+    OnClick = btnDesignRelatorioClick
+  end
+  object Button1: TButton
+    Left = 456
+    Top = 552
+    Width = 161
+    Height = 25
+    Caption = 'Button1'
+    TabOrder = 14
+    OnClick = Button1Click
+  end
   object DataSource1: TDataSource
     DataSet = dmdRelatorios.qryCountry
     Left = 680
@@ -163,7 +181,7 @@
   object OpenDialog1: TOpenDialog
     DefaultExt = '.fr3'
     Filter = 'FastReport|*.fr3'
-    Left = 352
-    Top = 544
+    Left = 16
+    Top = 552
   end
 end

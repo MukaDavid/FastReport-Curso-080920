@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<inherited ParentReport="RelatorioBase.fr3" PreviewOptions.OutlineVisible="True" ReportOptions.CreateDate="44084,8134199537" ReportOptions.LastChange="44084,9043016435" ScriptText.Text="&#13;&#10;begin&#13;&#10;&#13;&#10;end.&#13;&#10;{&#13;&#10;**********Script from parent report**********&#13;&#10;&#13;&#10;begin&#13;&#10;&#13;&#10;end.&#13;&#10;}" StoreInDFM="False">
+<inherited ParentReport="RelatorioBase.fr3" PreviewOptions.OutlineVisible="True" ReportOptions.CreateDate="44084,8134199537" ReportOptions.LastChange="44091,8563961343" ScriptText.Text="&#13;&#10;begin&#13;&#10;&#13;&#10;end.&#13;&#10;{&#13;&#10;**********Script from parent report**********&#13;&#10;&#13;&#10;begin&#13;&#10;&#13;&#10;end.&#13;&#10;}" StoreInDFM="False">
   <Datasets>
     <item DataSet="frxDBSales" DataSetName="frxDBSales"/>
   </Datasets>
@@ -10,7 +10,7 @@
   <inherited Name="Data"/>
   <inherited Name="Page1" PaperSize="9">
     <inherited Name="RptTitle">
-      <inherited Name="memTitulo" Text="Relatório de Vendas"/>
+      <inherited Name="memTitulo" Font.Color="255" Text="Relatório de Vendas"/>
       <inherited Name="imgLogo"/>
       <inherited Name="memData">
         <Formats>
@@ -41,7 +41,7 @@
     <TfrxGroupFooter Name="GroupFooter1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Frame.Typ="4" Height="22,67718" Left="0" Top="362,83488" Width="718,1107" KeepChild="True">
       <TfrxMemoView Name="Memo8" AllowVectorExport="True" Left="440" Top="1,11008" Width="142,48825" Height="18,89765" DisplayFormat.FormatStr="%2.2m" DisplayFormat.Kind="fkNumeric" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" Frame.Typ="0" HAlign="haRight" ParentFont="False" Text="Total: [SUM(&#60;frxDBSales.&#34;TOTAL_VALUE&#34;&#62;,MasterDataBand)]"/>
     </TfrxGroupFooter>
-    <TfrxHeader Name="Header1" FillType="ftBrush" Fill.BackColor="8421504" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Frame.Typ="15" Height="22,67718" Left="0" Top="222,99227" Width="718,1107" ReprintOnNewPage="True">
+    <TfrxHeader Name="Header1" FillType="ftBrush" Fill.BackColor="16711680" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Frame.Typ="15" Font.Charset="1" Font.Color="16711680" Font.Height="-13" Font.Name="Arial" Font.Style="0" Height="22,67718" Left="0" ParentFont="False" Top="222,99227" Width="718,1107" ReprintOnNewPage="True">
       <TfrxMemoView Name="Memo2" AllowVectorExport="True" Left="10,5" Top="2,88961" Width="79,37013" Height="18,89765" Font.Charset="1" Font.Color="16777215" Font.Height="-13" Font.Name="Arial" Font.Style="1" Frame.Typ="0" HAlign="haCenter" ParentFont="False" Text="Pedido"/>
       <TfrxMemoView Name="Memo3" AllowVectorExport="True" Left="98,5" Top="2,88961" Width="79,37013" Height="18,89765" Font.Charset="1" Font.Color="16777215" Font.Height="-13" Font.Name="Arial" Font.Style="1" Frame.Typ="0" HAlign="haCenter" ParentFont="False" Text="Cliente"/>
       <TfrxMemoView Name="Memo4" AllowVectorExport="True" Left="193,16666666" Top="2,88961" Width="100,03679667" Height="18,89765" Font.Charset="1" Font.Color="16777215" Font.Height="-13" Font.Name="Arial" Font.Style="1" Frame.Typ="0" HAlign="haCenter" ParentFont="False" Text="Representante"/>

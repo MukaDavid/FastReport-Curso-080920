@@ -26,12 +26,16 @@ type
     btnAbrirRelatório: TButton;
     btnBiolife: TButton;
     chxMostraChild: TCheckBox;
+    btnDesignRelatorio: TButton;
+    Button1: TButton;
     procedure btnListagemColaboradoresClick(Sender: TObject);
     procedure btnRelatorioColaboradoresSalarioClick(Sender: TObject);
     procedure btnRelatorioVendasClick(Sender: TObject);
     procedure btnRelatorioDepartamentoClick(Sender: TObject);
     procedure btnAbrirRelatórioClick(Sender: TObject);
     procedure btnBiolifeClick(Sender: TObject);
+    procedure btnDesignRelatorioClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -56,6 +60,14 @@ end;
 procedure TfrmPrincipal.btnBiolifeClick(Sender: TObject);
 begin
   dmdRelatorios.PreviewRelatorioBiolife(chxMostraChild.Checked);
+end;
+
+procedure TfrmPrincipal.btnDesignRelatorioClick(Sender: TObject);
+begin
+  if OpenDialog1.Execute then
+  begin
+    dmdRelatorios.DesignRelatorioArquivo(OpenDialog1.FileName);
+  end;
 end;
 
 procedure TfrmPrincipal.btnListagemColaboradoresClick(Sender: TObject);
@@ -83,6 +95,12 @@ begin
   //dmdRelatorios.PreviewRelatorioVendas;
 
   dmdRelatorios.PreviewRelatorioDepartamento(CheckBox1.Checked);
+end;
+
+procedure TfrmPrincipal.Button1Click(Sender: TObject);
+begin
+  //dmdRelatorios.PreviewCadastroSemDB;
+  dmdRelatorios.PreviewGenerico(dmdRelatorios.qryCountry);
 end;
 
 end.
